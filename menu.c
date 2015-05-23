@@ -44,6 +44,8 @@ void SwitchRadioOn(UINT8 u8RadioStation);
 void SwitchRadioOff();
 void SwitchWlanOn();
 void SwitchWlanOff();
+void PlayManu();
+void StopPlayManu();
 
 void menu_Update()
 {
@@ -176,6 +178,8 @@ void menu_Update()
 				if (ENC_SWITCH(u8Action)) 
 				{
 					u8MenuState = MENU_ACTIVE;
+					if (u8Menu3 == 0) StopPlayManu();
+					else              PlayManu();
 				}
 				if (ENC_FOREWARD(u8Action)) 
 				{
@@ -276,6 +280,29 @@ void menu_Update()
 }
 
 //-----------------------------------
+//-----------------------------------
+void PlayManu()
+{
+	int pid;
+	pid = fork();
+	if (pid == 0)
+	{
+		system("'nice -n-1 mplayer -ao alsa:device=bluetooth /home/pi/Esperanza.mp3'");
+		exit(0);
+	}
+}
+
+void StopPlayManu()
+{
+	int pid;
+	pid = fork();
+	if (pid == 0)
+	{
+		system("sudo killall mplayer");
+		exit(0);
+	}
+}
+//-----------------------------------
 // Switch Wlan On/Off
 //-----------------------------------
 void SwitchWlanOn()
@@ -368,6 +395,9 @@ void SwitchRadioOn(UINT8 u8RadioStation)
 				break;
 			case 14:
 				sprintf(txt, "nice -n-1 mplayer -ao alsa:device=bluetooth -playlist %s", CHANNEL12);
+				break;
+			case 15:
+				sprintf(txt, "nice -n-1 mplayer -ao alsa:device=bluetooth /home/pi/Esperanza.mp3");
 				break;
 		}
 		system("nice -n-2 killall mplayer");
