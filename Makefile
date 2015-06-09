@@ -1,21 +1,25 @@
 
 
-clock : clock.o enc.o main.o menu.o seg7.o 
-	cc -o clock clock.o main.o menu.o seg7.o enc.o -lwiringPi
+clock : pangea_clock.o menu0.o menu1.o menu18.o menu19.o menu28.o
+	cc -o clock pangea_clock.o menu0.o menu1.o menu18.o menu19.o menu28.o -ldispsw
 
-clock.o : clock.c types.h clock.h
-	cc -Wall -c clock.c
+pangea_clock.o : pangea_clock.c pangea_clock.h types.h
+	cc -Wall -c pangea_clock.c
 
-enc.o : enc.c types.h enc.h
-	cc -Wall -c enc.c
+menu0.o : menu0.c pangea_clock.h types.h  
+	cc -Wall -c menu0.c
 
-main.o : main.c types.h enc.h clock.h menu.h
-	cc -Wall -c main.c
+menu1.o : menu1.c pangea_clock.h types.h
+	cc -Wall -c menu1.c
 
-menu.o : menu.c types.h menu.h enc.h clock.h
-	cc -Wall -c menu.c
+menu18.o : menu18.c pangea_clock.h types.h
+	cc -Wall -c menu18.c
 
-seg7.o : seg7.h types.h 
-	cc -Wall -c seg7.c
+menu19.o : menu19.c pangea_clock.h types.h
+	cc -Wall -c menu19.c
+
+menu28.o : menu28.c pangea_clock.h types.h
+	cc -Wall -c menu28.c
+
 
 
