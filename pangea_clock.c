@@ -16,21 +16,21 @@ void funcDft(UINT8 u8MenuNumber, UINT8 u8MenuValue, UINT8 u8Cmd);
 
 extern void funcMenu0(UINT8 u8MenuNumber, UINT8 u8MenuValue, UINT8 u8Cmd);
 extern void funcMenu1(UINT8 u8MenuNumber, UINT8 u8MenuValue, UINT8 u8Cmd);
-extern void funcMenu18(UINT8 u8MenuNumber, UINT8 u8MenuValue, UINT8 u8Cmd);
-extern void funcMenu19(UINT8 u8MenuNumber, UINT8 u8MenuValue, UINT8 u8Cmd);
-extern void funcMenu28(UINT8 u8MenuNumber, UINT8 u8MenuValue, UINT8 u8Cmd);
+extern void funcMenu5(UINT8 u8MenuNumber, UINT8 u8MenuValue, UINT8 u8Cmd);
+extern void funcMenu6(UINT8 u8MenuNumber, UINT8 u8MenuValue, UINT8 u8Cmd);
+extern void funcMenu7(UINT8 u8MenuNumber, UINT8 u8MenuValue, UINT8 u8Cmd);
 
 void (*afuncptr[100])(UINT8 u8MenuNumber, UINT8 u8MenuValue, UINT8 u8Cmd)={
-	funcMenu0, funcMenu1, funcDft, funcDft, funcDft, funcDft, funcDft, funcDft, funcDft   , funcDft,
-	funcDft  , funcDft  , funcDft, funcDft, funcDft, funcDft, funcDft, funcDft, funcMenu18, funcMenu19,
-	funcDft  , funcDft  , funcDft, funcDft, funcDft, funcDft, funcDft, funcDft, funcMenu28, funcDft,
-	funcDft  , funcDft  , funcDft, funcDft, funcDft, funcDft, funcDft, funcDft, funcDft   , funcDft,
-	funcDft  , funcDft  , funcDft, funcDft, funcDft, funcDft, funcDft, funcDft, funcDft   , funcDft,
-	funcDft  , funcDft  , funcDft, funcDft, funcDft, funcDft, funcDft, funcDft, funcDft   , funcDft,
-	funcDft  , funcDft  , funcDft, funcDft, funcDft, funcDft, funcDft, funcDft, funcDft   , funcDft,
-	funcDft  , funcDft  , funcDft, funcDft, funcDft, funcDft, funcDft, funcDft, funcDft   , funcDft,
-	funcDft  , funcDft  , funcDft, funcDft, funcDft, funcDft, funcDft, funcDft, funcDft   , funcDft,
-	funcDft  , funcDft  , funcDft, funcDft, funcDft, funcDft, funcDft, funcDft, funcDft   , funcDft
+	funcMenu0, funcMenu1, funcDft, funcDft, funcDft, funcMenu5, funcMenu6, funcMenu7, funcDft   , funcDft,
+	funcDft  , funcDft  , funcDft, funcDft, funcDft, funcDft, funcDft, funcDft, funcDft, funcDft,
+	funcDft  , funcDft  , funcDft, funcDft, funcDft, funcDft, funcDft, funcDft, funcDft, funcDft,
+	funcDft  , funcDft  , funcDft, funcDft, funcDft, funcDft, funcDft, funcDft, funcDft, funcDft,
+	funcDft  , funcDft  , funcDft, funcDft, funcDft, funcDft, funcDft, funcDft, funcDft, funcDft,
+	funcDft  , funcDft  , funcDft, funcDft, funcDft, funcDft, funcDft, funcDft, funcDft, funcDft,
+	funcDft  , funcDft  , funcDft, funcDft, funcDft, funcDft, funcDft, funcDft, funcDft, funcDft,
+	funcDft  , funcDft  , funcDft, funcDft, funcDft, funcDft, funcDft, funcDft, funcDft, funcDft,
+	funcDft  , funcDft  , funcDft, funcDft, funcDft, funcDft, funcDft, funcDft, funcDft, funcDft,
+	funcDft  , funcDft  , funcDft, funcDft, funcDft, funcDft, funcDft, funcDft, funcDft, funcDft
 };
 
 

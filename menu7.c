@@ -12,7 +12,7 @@
 //******************************************************************************
 
 
-void funcMenu18(UINT8 u8MenuNumber, UINT8 u8MenuValue, UINT8 u8Cmd)
+void funcMenu7(UINT8 u8MenuNumber, UINT8 u8MenuValue, UINT8 u8Cmd)
 {
 	char txt[500]={0};
 	int pid;
@@ -32,7 +32,7 @@ void funcMenu18(UINT8 u8MenuNumber, UINT8 u8MenuValue, UINT8 u8Cmd)
 						sprintf(txt, "sudo killall mplayer");
 						break;
 					default:
-						sprintf(txt, "/home/pi/musik/Katharina/playmusic18 %d", u8MenuValue);
+						sprintf(txt, "/home/pi/musik/playmusic7 %d", u8MenuValue);
 						break;
 				}
 				system(txt);
