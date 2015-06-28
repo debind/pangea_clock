@@ -46,49 +46,49 @@ void funcMenu1(UINT8 u8MenuNumber, UINT8 u8MenuValue, UINT8 u8Cmd)
 						sprintf(txt," ");
 						break;
 					case 1:
-						sprintf(txt, "nice -n-1 mplayer -ao alsa:device=bluetooth %s"          , CHANNEL1);
+						sprintf(txt, "mplayer -cache 200 -ao alsa:device=bluetooth %s"          , CHANNEL1);
 						break;
 					case 2:
-						sprintf(txt, "nice -n-1 mplayer -ao alsa:device=bluetooth %s"          , CHANNEL2);
+						sprintf(txt, "mplayer -cache 200 -ao alsa:device=bluetooth %s"          , CHANNEL2);
 						break;
 					case 3:
-						sprintf(txt, "nice -n-1 mplayer -ao alsa:device=bluetooth %s"          , CHANNEL3);
+						sprintf(txt, "mplayer -cache 200 -ao alsa:device=bluetooth %s"          , CHANNEL3);
 						break;
 					case 4:
-						sprintf(txt, "nice -n-1 mplayer -ao alsa:device=bluetooth %s"          , CHANNEL4);
+						sprintf(txt, "mplayer -cache 200 -ao alsa:device=bluetooth %s"          , CHANNEL4);
 						break;
 					case 5:
-						sprintf(txt, "nice -n-1 mplayer -ao alsa:device=bluetooth -playlist %s", CHANNEL5);
+						sprintf(txt, "mplayer -cache 200 -ao alsa:device=bluetooth -playlist %s", CHANNEL5);
 						break;
 					case 6:
-						sprintf(txt, "nice -n-1 mplayer -ao alsa:device=bluetooth %s"          ,CHANNEL6);
+						sprintf(txt, "mplayer -cache 200 -ao alsa:device=bluetooth %s"          ,CHANNEL6);
 						break;
 					case 7:
-						sprintf(txt, "nice -n-1 mplayer -ao alsa:device=bluetooth %s"          , CHANNEL7);
+						sprintf(txt, "mplayer -cache 200 -ao alsa:device=bluetooth %s"          , CHANNEL7);
 						break;
 					case 8:
-						sprintf(txt, "nice -n-1 mplayer -ao alsa:device=bluetooth -playlist %s", CHANNEL8);
+						sprintf(txt, "mplayer -cache 200 -ao alsa:device=bluetooth -playlist %s", CHANNEL8);
 						break;
 					case 9:
-						sprintf(txt, "nice -n-1 mplayer -ao alsa:device=bluetooth -playlist %s", CHANNEL9);
+						sprintf(txt, "mplayer -cache 200 -ao alsa:device=bluetooth -playlist %s", CHANNEL9);
 						break;
 					case 10:
-						sprintf(txt, "nice -n-1 mplayer -ao alsa:device=bluetooth -playlist %s", CHANNEL10);
+						sprintf(txt, "mplayer -cache 200 -ao alsa:device=bluetooth -playlist %s", CHANNEL10);
 						break;
 					case 11:
-						sprintf(txt, "nice -n-1 mplayer -ao alsa:device=bluetooth -playlist %s", CHANNEL11);
+						sprintf(txt, "mplayer -cache 200 -ao alsa:device=bluetooth -playlist %s", CHANNEL11);
 						break;
 					case 12:
-						sprintf(txt, "nice -n-1 mplayer -ao alsa:device=bluetooth -playlist %s", CHANNEL12);
+						sprintf(txt, "mplayer -cache 200 -ao alsa:device=bluetooth -playlist %s", CHANNEL12);
 						break;
 					case 13:
-						sprintf(txt, "nice -n-1 mplayer -ao alsa:device=bluetooth -playlist %s", CHANNEL12);
+						sprintf(txt, "mplayer -cache 200 -ao alsa:device=bluetooth -playlist %s", CHANNEL12);
 						break;
 					case 14:
-						sprintf(txt, "nice -n-1 mplayer -ao alsa:device=bluetooth -playlist %s", CHANNEL12);
+						sprintf(txt, "mplayer -cache 200 -ao alsa:device=bluetooth -playlist %s", CHANNEL12);
 						break;
 				}
-				system("nice -n-2 killall mplayer");
+				system("killall mplayer");
 				system(txt);
 				exit (1);
 			}
