@@ -25,15 +25,7 @@ void funcMenu1(UINT8 u8MenuNumber, UINT8 u8MenuValue, UINT8 u8Cmd)
 			pid = fork();
 			if (pid == 0)
 			{
-				switch(u8MenuValue)
-				{
-					case 0:
-						sprintf(txt, "sudo killall mplayer");
-						break;
-					default:
-						sprintf(txt, "/home/pi/musik/playmusic1 %d", u8MenuValue);
-						break;
-				}
+				sprintf(txt, "/home/pi/musik/playmusic1 %d", u8MenuValue);
 				system(txt);
 				exit (1);
 			}
