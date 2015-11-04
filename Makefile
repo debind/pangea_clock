@@ -1,7 +1,7 @@
 
 
-clock : pangea_clock.o menu0.o menu1.o menu4.o menu5.o menu6.o menu7.o
-	cc -o clock pangea_clock.o menu0.o menu1.o menu4.o menu5.o menu6.o menu7.o -ldispsw
+clock : pangea_clock.o menu0.o menu1.o menu3.o menu4.o menu5.o menu6.o menu7.o
+	cc -o clock pangea_clock.o menu0.o menu1.o menu3.o menu4.o menu5.o menu6.o menu7.o -ldispsw
 
 pangea_clock.o : pangea_clock.c pangea_clock.h types.h
 	cc -Wall -c pangea_clock.c
@@ -14,6 +14,9 @@ menu1.o : menu1.c pangea_clock.h types.h
 
 menu4.o : menu4.c pangea_clock.h types.h
 	cc -Wall -c menu4.c
+
+menu3.o : menu3.c pangea_clock.h types.h
+	cc -Wall -c menu3.c
 
 menu5.o : menu5.c pangea_clock.h types.h
 	cc -Wall -c menu5.c
